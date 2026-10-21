@@ -1,0 +1,10 @@
+array - static126
+pen ghost texture/color - const_blue
+Rectangle:
+- opposite_edges
+- black_border
+- cyan_fill
+Elipse:
+- from center to point of overlaying rectangle
+- light-green filling
+Current object - in the menu

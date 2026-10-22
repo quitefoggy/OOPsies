@@ -9,6 +9,7 @@ protected:
     QPoint ps1, ps2;
     int xs1, ys1, xs2, ys2;
     QColor sh_color;
+    bool is_transparent = false;
 public:
     Shape(){
         xs1 = 0;
@@ -64,6 +65,8 @@ private:
     int sh_size = 8;
 public:
     RectShape(){
+
+        is_transparent = false;
         r_color = Qt::black;
         sh_size = 8;
     };
@@ -76,6 +79,7 @@ private:
     int sh_size = 5;
 public:
     ElipseShape(){
+        //is_transparent = false;
         e_color = Qt::black;
         sh_size = 5;
     };
@@ -100,6 +104,7 @@ private:
     int sh_size = 8;
 public:
     CubeShape(){
+        is_transparent = true;
         cubew_color = Qt::black;
         sh_size = 8;
     };

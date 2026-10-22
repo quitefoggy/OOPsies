@@ -28,7 +28,9 @@ void RectShape::Show(QPoint p1, QPoint p2, int size, QColor color, QPainter &pai
     sh_size = size;
     sh_color = color;
 
-    painter.setBrush(QBrush(Qt::cyan));
+    if(is_transparent == false){
+        painter.setBrush(QBrush(Qt::cyan));
+    }
     painter.setPen(QPen(color, size, Qt::SolidLine, Qt::RoundCap,Qt::RoundJoin));
     painter.drawRect(QRect(p1,p2));
 }
@@ -40,7 +42,9 @@ void ElipseShape::Show(QPoint p1, QPoint p2, int size, QColor color, QPainter &p
     int rx = abs(p2.x()-p1.x());
     int ry = abs(p2.y()-p1.y());
 
-    painter.setBrush(QBrush(Qt::green));
+    if(is_transparent == false){
+        painter.setBrush(QBrush(Qt::green));
+    }
     painter.setPen(QPen(color, size, Qt::SolidLine, Qt::RoundCap,Qt::RoundJoin));
     painter.drawEllipse(p1, rx, ry);
 

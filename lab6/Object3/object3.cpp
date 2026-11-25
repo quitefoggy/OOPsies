@@ -22,14 +22,14 @@ void Object3::parseClipboard(){
     qInfo() << clipboard->text();
     const QMimeData *mimeData = clipboard->mimeData();
 
-    setWindowTitle(clipboard->text());
+    //setWindowTitle(clipboard->text());
     if (mimeData->hasText()) {
         //qInfo() << "hmm...";
         QString clipboard_info = clipboard->text(QClipboard::Clipboard); //QClipboard::Selection or Clipboard
         QStringList point_info = clipboard_info.split(" ");
         //qInfo() << point_info;
         std::vector<int> point_list;
-        for (int i = 0; i<point_info.length();i++){
+        for (int i = 0; i<point_info.length()-1;i++){
             point_list.push_back(static_cast<int>(std::round(point_info[i].toDouble())));
         }
         qInfo() << point_list;

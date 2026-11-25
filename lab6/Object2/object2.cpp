@@ -19,7 +19,7 @@ void Object2::logic(int N, int Min, int Max){
     std::default_random_engine re;
     //std::vector<double> val_vector(N);
     QString all_nums;
-    QClipboard *clipboard = QApplication::clipboard();
+    //QClipboard *clipboard = QApplication::clipboard();
 
     for (int i = 0; i < N; i++){
         double ran_val = unif(re);

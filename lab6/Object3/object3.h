@@ -1,7 +1,6 @@
 #ifndef OBJECT3_H
 #define OBJECT3_H
 
-#include "shapelist_window.h"
 #include <QList>
 #include <QMainWindow>
 #include <QObject>
@@ -21,7 +20,6 @@ public:
 
     // What we'll draw on
     ScribbleArea *scribbleArea;
-    ShapeList_window *shape_list_window;
 
 private:
     Object3();

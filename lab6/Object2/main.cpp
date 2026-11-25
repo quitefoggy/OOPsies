@@ -12,6 +12,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     Object2 w;
+
+    w.clipboard = QApplication::clipboard();
+
     //qInfo() << argv[1];
     int N = std::stoi(argv[1]);
     int Min = std::stoi(argv[2]);
